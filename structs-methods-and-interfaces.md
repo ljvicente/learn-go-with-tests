@@ -98,7 +98,7 @@ type Rectangle struct {
 }
 ```
 
-Now lets refactor the tests to use `Rectangle` instead of plain `float64`s.
+Now let's refactor the tests to use `Rectangle` instead of plain `float64`s.
 
 ```go
 func TestPerimeter(t *testing.T) {
@@ -214,7 +214,7 @@ We have two choices:
 
 ### What are methods?
 
-So far we have only been writing _functions_ but we have been using some methods. When we call `t.Errorf` we are calling the method `ErrorF` on the instance of our `t` \(`testing.T`\).
+So far we have only been writing _functions_ but we have been using some methods. When we call `t.Errorf` we are calling the method `Errorf` on the instance of our `t` \(`testing.T`\).
 
 A method is a function with a receiver. A method declaration binds an identifier, the method name, to a method, and associates the method with the receiver's base type.
 
@@ -282,7 +282,7 @@ func (c Circle) Area() float64  {
 }
 ```
 
-The syntax for declaring methods is almost the same as functions and that's because they're so similar. The only difference is the syntax of the method receiver `func (receiverName RecieverType) MethodName(args)`.
+The syntax for declaring methods is almost the same as functions and that's because they're so similar. The only difference is the syntax of the method receiver `func (receiverName ReceiverType) MethodName(args)`.
 
 When your method is called on a variable of that type, you get your reference to its data via the `receiverName` variable. In many other programming languages this is done implicitly and you access the receiver via `this`.
 
